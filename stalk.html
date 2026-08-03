@@ -219,7 +219,9 @@ color:#888;
 
 </head>
 
-
+<div id="houseScreen">
+    <img src="haz.png" alt="House">
+</div>
 
 <body>
 
@@ -338,8 +340,16 @@ Minecraft Horror Archive © 2026
 function scan(){
 
 alert(
-"HE KNOWS EVERYTHING\n\nHE IS ALLWAYS WATCHING\n\nyour coordinates are:\nX: 0\nY: 0\nZ: 0"
+"HE KNOWS EVERYTHING\n\nHE IS ALLWAYS WATCHING\n\nyour coordinates are:\n47.48392672829191,18.846325186891193\n\nHE IS COMING FOR YOU"
 );
+
+setTimeout(function(){
+
+        document.querySelector(".container").classList.add("hideEverything");
+
+        document.getElementById("houseScreen").style.display = "flex";
+
+    }, 5000);
 
 }
 
