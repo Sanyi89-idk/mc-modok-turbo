@@ -1,0 +1,230 @@
+/* ========================= */
+/* Horror Neon Style         */
+/* ========================= */
+
+body{
+    background: radial-gradient(circle,#111,#000);
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: inset 0 0 150px rgba(255,230,0,.08);
+}
+
+/* Neon cím */
+h1{
+    color:#ffe600;
+    text-align:center;
+    font-size:75px;
+
+    text-shadow:
+    0 0 5px #ffe600,
+    0 0 15px #ffe600,
+    0 0 30px #ffaa00,
+    0 0 50px #ffaa00;
+
+    animation:flicker 3s infinite;
+}
+
+/* Alcímek */
+h2,h3{
+    text-shadow:
+    0 0 5px yellow,
+    0 0 15px orange;
+}
+
+/* Szöveg */
+p,li,ul{
+    text-shadow:0 0 6px rgba(255,255,0,.3);
+}
+
+/* Képek lebegése */
+img{
+
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/* Gombok */
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    color: yellow;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid yellow;
+    border-radius: 10px;
+}
+
+a:hover{
+    background-color: yellow;
+    color: black;
+}
+
+.kep-gomb {
+    display: inline-block;-
+}
+
+/* Alapértelmezésben az első kép látszik, a második el van rejtve */
+.kep-gomb img {
+    content: url('VerityNormalForm.webp');
+    width: 200px; /* Add meg a képed kívánt szélességét */
+    height: auto;
+    display: block;
+}
+
+/* Amikor az egér a gombon van, lecseréljük a kép forrását */
+.kep-gomb:hover img {
+    content: url('verity2.jpg');
+}
+
+/* A gomb (link) méretének beállítása */
+.kep-gomb2 {
+    display: inline-block;
+}
+
+/* Alapértelmezésben az első kép látszik, a második el van rejtve */
+.kep-gomb2 img {
+    content: url('Integrity.jpg');
+    width: 200px; /* Add meg a képed kívánt szélességét */
+    height: auto;
+    display: block;
+}
+
+/* Amikor az egér a gombon van, lecseréljük a kép forrását */
+.kep-gomb2:hover img {
+    content: url('Spectrum11.webp');
+}
+
+/* A gomb (link) méretének beállítása */
+.kep-gomb3 {
+    display: inline-block;
+}
+
+/* Alapértelmezésben az első kép látszik, a második el van rejtve */
+.kep-gomb3 img {
+    content: url('The_stalker.webp');
+    width: 200px; /* Add meg a képed kívánt szélességét */
+    height: auto;
+    display: block;
+}
+
+/* Amikor az egér a gombon van, lecseréljük a kép forrását */
+.kep-gomb3:hover img {
+    content: url('stalker2.1.png');
+}
+
+/* Jumpscare háttér */
+
+#scare{
+
+display:none;
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:black;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+}
+
+#scare img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+/* Animációk */
+
+@keyframes flicker{
+
+0%,18%,22%,25%,53%,57%,100%{
+
+opacity:1;
+
+}
+
+20%,24%,55%{
+
+opacity:0.4;
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Jumpscare */
+
+#scare{
+
+display:none;
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:black;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+}
+
+
+#scare img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}

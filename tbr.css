@@ -1,0 +1,462 @@
+body{
+
+background:
+radial-gradient(circle,#220000,#000);
+
+color:white;
+
+font-family:Arial, Helvetica, sans-serif;
+
+margin:0;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+
+/* CÍM */
+
+
+h1{
+
+
+text-align:center;
+
+font-size:75px;
+
+color:red;
+
+
+text-shadow:
+
+0 0 5px red,
+0 0 20px red,
+0 0 50px darkred;
+
+
+animation:glitch 1s infinite;
+
+
+}
+
+
+
+
+
+/* GOMBOK */
+
+
+#buttons{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+
+}
+
+
+
+#buttons a{
+
+
+width:220px;
+
+padding:18px;
+
+
+background:black;
+
+
+border:4px solid red;
+
+
+border-radius:10px;
+
+
+color:red;
+
+
+text-align:center;
+
+text-decoration:none;
+
+
+font-size:28px;
+
+font-weight:bold;
+
+
+box-shadow:
+
+0 0 15px red;
+
+
+}
+
+
+
+
+
+#buttons a:hover{
+
+
+background:red;
+
+color:black;
+
+
+}
+
+
+
+
+
+/* SZÖVEG */
+
+
+#story{
+
+
+margin-top:50px;
+
+}
+
+
+
+h2,h3{
+
+
+color:red;
+
+
+text-shadow:
+
+0 0 10px red;
+
+
+}
+
+
+.error{
+
+
+color:red;
+
+font-size:30px;
+
+animation:blink .3s infinite;
+
+
+}
+
+
+
+
+
+/* TURN */
+
+
+#turnContainer{
+
+
+display:flex;
+
+justify-content:center;
+
+margin-top:50px;
+
+
+}
+
+
+#turnBtn{
+
+
+display:none;
+
+
+background:black;
+
+
+border:4px solid red;
+
+
+color:#ff7777;
+
+
+width:250px;
+
+
+padding:20px;
+
+
+font-size:30px;
+
+
+font-weight:bold;
+
+
+}
+
+
+
+
+
+#turnText{
+
+
+display:inline-block;
+
+animation:shake .2s infinite;
+
+
+}
+
+
+
+
+
+/* JUMPSCARE */
+
+
+#scare{
+
+
+display:none;
+
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+
+width:100%;
+
+height:100%;
+
+
+background:black;
+
+
+justify-content:center;
+
+align-items:center;
+
+
+z-index:99999;
+
+
+}
+
+
+#scare img{
+
+
+width:100%;
+
+height:100%;
+
+
+object-fit:cover;
+
+
+}
+
+
+
+
+
+
+@keyframes glitch{
+
+
+0%{
+
+transform:translate(0);
+
+}
+
+
+20%{
+
+transform:translate(-5px,3px);
+
+}
+
+
+40%{
+
+transform:translate(5px,-3px);
+
+}
+
+
+60%{
+
+transform:translate(-3px);
+
+}
+
+
+100%{
+
+transform:translate(0);
+
+}
+
+
+}
+
+
+
+
+@keyframes shake{
+
+
+0%{
+
+transform:translateX(0);
+
+}
+
+
+50%{
+
+transform:translateX(5px);
+
+}
+
+
+100%{
+
+transform:translateX(-5px);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes blink{
+
+
+50%{
+
+opacity:.2;
+
+}
+
+
+}
+
+/* ========================= */
+/* BROKEN SCRIPT BOSS EVENT */
+/* ========================= */
+
+
+.fadeAway{
+
+    opacity:0;
+
+    transition:3s;
+
+}
+
+
+
+
+#bossText{
+
+
+    display:none;
+
+
+    position:fixed;
+
+
+    top:50%;
+
+    left:50%;
+
+
+    transform:translate(-50%,-50%);
+
+
+    color:red;
+
+
+    font-size:90px;
+
+
+    font-weight:bold;
+
+
+    text-align:center;
+
+
+    text-shadow:
+
+    0 0 10px red,
+    0 0 30px red,
+    0 0 80px darkred;
+
+
+    animation:bossGlitch .4s infinite;
+
+
+    z-index:9999;
+
+
+}
+
+
+
+
+@keyframes bossGlitch{
+
+
+0%{
+
+transform:translate(-50%,-50%);
+
+}
+
+
+25%{
+
+transform:translate(calc(-50% - 5px),-50%);
+
+}
+
+
+50%{
+
+transform:translate(calc(-50% + 5px),-50%);
+
+}
+
+
+100%{
+
+transform:translate(-50%,-50%);
+
+}
+
+
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Broken Script</title>
+
+<link rel="stylesheet" href="tbr.css">
+
+</head>
+
+
+<body>
+
+
+<h1>The Broken Script</h1>
+
+
+
+<div id="buttons">
+
+
+<a id="verityBtn" href="verity.html">
+VERITY
+</a>
+
+
+<a id="brokenBtn" href="tbr.html">
+BROKEN SCRIPT
+</a>
+
+
+<a id="stalkerBtn" href="stalk.html">
+STALKER
+</a>
+
+
+</div>
+
+
+
+
+
+<div id="story">
+
+
+<p>
+A történet szerint régen létezett egy multiplayer szerver.
+</p>
+
+
+<p>
+Ezen több játékos játszott.
+</p>
+
+
+<p>
+Két nagy csoport alakult ki.
+</p>
+
+
+
+<h2>
+Blackout klánja
+</h2>
+
+<h3>
+Tagjai között volt:
+</h3>
+
+
+
+
+<li>Blackout</li>
+
+<li>OVERLORD</li>
+
+<li>catfish12</li>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- BOSS SZÖVEG -->
+
+
+<div id="bossText">
+
+HERE I AM.
+
+</div>
+
+
+
+
+
+<!-- JUMPSCARE -->
+
+
+<div id="scare">
+
+<img src="Spectrum11.webp">
+
+</div>
+
+
+
+
+
+<script>
+
+
+const bossText = document.getElementById("bossText");
+
+const scare = document.getElementById("scare");
+
+
+
+// kisebb szövegek eltűnése
+
+setTimeout(()=>{
+
+
+document.querySelectorAll("p, ul, li").forEach(element=>{
+
+element.classList.add("fadeAway");
+
+});
+
+
+},10000);
+
+
+
+
+
+// alcímek eltűnése
+
+setTimeout(()=>{
+
+
+document.querySelectorAll("h2,h3,h4,h5,h6").forEach(element=>{
+
+element.classList.add("fadeAway");
+
+});
+
+
+},15000);
+
+
+
+
+
+// főcím eltűnése
+
+setTimeout(()=>{
+
+
+document.querySelector("h1").classList.add("fadeAway");
+
+
+},20000);
+
+
+
+
+
+// HERE I AM megjelenés
+
+setTimeout(()=>{
+
+
+bossText.style.display="block";
+
+
+},25000);
+
+
+
+
+
+// jumpscare
+
+setTimeout(()=>{
+
+
+scare.style.display="flex";
+
+
+},28000);
+
+
+
+</script>
+
+
+</body>
+
+</html>
