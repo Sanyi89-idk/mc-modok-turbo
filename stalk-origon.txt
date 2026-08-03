@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body{
+    background:#050505;
+    color:white;
+    font-family:monospace;
+}
+
+.stalker{
+    width:400px;
+    filter:brightness(0.7);
+    animation:glitch 2s infinite;
+}
+
+
+@keyframes glitch{
+
+0%{
+transform:translate(0);
+}
+
+20%{
+transform:translate(-5px,3px);
+}
+
+40%{
+transform:translate(3px,-2px);
+}
+
+100%{
+transform:translate(0);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<h1>STALKER DATABASE</h1>
+
+<img class="stalker" src="stalker2.1.png">
+
+
+<p>
+ENTITY STATUS:
+<span style="color:red">
+HOSTILE
+</span>
+</p>
+
+
+<button onclick="alert('I know where dou you live.');">
+OPEN FILE
+</button>
+
+
+<script>
+
+document.body.onclick=function(){
+console.log("Entity watching...");
+}
+
+</script>
+
+
+</body>
+</html>
