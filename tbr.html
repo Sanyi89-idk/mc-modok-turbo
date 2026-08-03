@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Broken Script</title>
-
 <link rel="stylesheet" href="tbr.css">
+
+<title>Broken Script</title>
 
 </head>
 
@@ -22,21 +22,17 @@
 
 <div id="buttons">
 
-
 <a id="verityBtn" href="verity.html">
 VERITY
 </a>
-
 
 <a id="brokenBtn" href="tbr.html">
 BROKEN SCRIPT
 </a>
 
-
 <a id="stalkerBtn" href="stalk.html">
 STALKER
 </a>
-
 
 </div>
 
@@ -67,20 +63,15 @@ Két nagy csoport alakult ki.
 Blackout klánja
 </h2>
 
-<h3>
-Tagjai között volt:
-</h3>
+<h3>Tagjai között volt:</h3>
 
 
 
+<h4>Blackout</h4>
 
-<li>Blackout</li>
+<h4>OVERLORD</h4>
 
-<li>OVERLORD</li>
-
-<li>catfish12</li>
-
-
+<h4>catfish12</h4>
 
 
 
@@ -91,8 +82,7 @@ Tagjai között volt:
 
 
 
-<!-- BOSS SZÖVEG -->
-
+<!-- BROKEN SCRIPT BOSS SZÖVEG -->
 
 <div id="bossText">
 
@@ -104,14 +94,15 @@ HERE I AM
 
 
 
-<!-- JUMPSCARE -->
-
+<!-- SPECTRUM 11 JUMPSCARE -->
 
 <div id="scare">
 
 <img src="Spectrum11.webp">
 
 </div>
+
+
 
 
 
@@ -126,6 +117,7 @@ const scare = document.getElementById("scare");
 
 
 
+
 // kisebb szövegek eltűnése
 
 setTimeout(()=>{
@@ -133,7 +125,9 @@ setTimeout(()=>{
 
 document.querySelectorAll("p, ul, li").forEach(element=>{
 
+
 element.classList.add("fadeAway");
+
 
 });
 
@@ -144,19 +138,41 @@ element.classList.add("fadeAway");
 
 
 
-// alcímek eltűnése
+
+
+// h2-h6 eltűnése
 
 setTimeout(()=>{
 
 
 document.querySelectorAll("h2,h3,h4,h5,h6").forEach(element=>{
 
+
 element.classList.add("fadeAway");
+
 
 });
 
 
 },15000);
+
+
+
+
+
+
+
+// gombok eltűnése
+
+setTimeout(()=>{
+
+
+document.querySelector("#buttons").classList.add("fadeAway");
+
+
+},20000);
+
+
 
 
 
@@ -176,7 +192,9 @@ document.querySelector("h1").classList.add("fadeAway");
 
 
 
-// HERE I AM megjelenés
+
+
+// HERE I AM megjelenése
 
 setTimeout(()=>{
 
@@ -190,7 +208,9 @@ bossText.style.display="block";
 
 
 
-// jumpscare
+
+
+// Spectrum 11 jumpscare
 
 setTimeout(()=>{
 
@@ -202,7 +222,9 @@ scare.style.display="flex";
 
 
 
+
 </script>
+
 
 
 </body>
