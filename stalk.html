@@ -220,12 +220,12 @@ color:#888;
 </head>
 
 <div id="houseScreen">
-    <img src="haz.png" alt="House">
+    <img src="kep.webp" alt="House">
 </div>
 
 <body>
 
-
+<audio id="scareSound" src="hl2-stalker-scream.mp3" preload="auto"></audio>
 
 <div class="container">
 
@@ -340,7 +340,7 @@ Minecraft Horror Archive © 2026
 function scan(){
 
 alert(
-"HE KNOWS EVERYTHING\n\nHE IS ALLWAYS WATCHING\n\nyour coordinates are:\n47.48392672829191,18.846325186891193\n\nHE IS COMING FOR YOU"
+"HE KNOWS EVERYTHING\n\nHE IS ALLWAYS WATCHING\n\nyour coordinates are:\nX:??? Y:??? Z:???\n\nHE IS COMING FOR YOU"
 );
 
 setTimeout(function(){
@@ -348,6 +348,11 @@ setTimeout(function(){
         document.querySelector(".container").classList.add("hideEverything");
 
         document.getElementById("houseScreen").style.display = "flex";
+
+        var audio = document.getElementById("scareSound");
+                audio.play().catch(function(error) {
+                    console.log("Nem sikerült elindítani a hangot:", error);
+                });
 
     }, 5000);
 
