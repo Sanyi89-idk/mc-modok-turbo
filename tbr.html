@@ -166,7 +166,7 @@ HERE I AM
 
 <div id="scare">
 
-<img src="Spectrum11.webp">
+<img id="spectrum11" src="Spectrum11.webp">
 
 </div>
 
@@ -201,7 +201,7 @@ element.classList.add("fadeAway");
 });
 
 
-},180000);
+},60000);
 
 
 
@@ -223,7 +223,7 @@ element.classList.add("fadeAway");
 });
 
 
-},190000);
+},70000);
 
 
 
@@ -240,7 +240,7 @@ setTimeout(()=>{
 document.querySelector("#buttons").classList.add("fadeAway");
 
 
-},200000);
+},80000);
 
 
 
@@ -256,7 +256,7 @@ setTimeout(()=>{
 document.querySelector("h1").classList.add("fadeAway");
 
 
-},210000);
+},90000);
 
 
 
@@ -272,7 +272,7 @@ setTimeout(()=>{
 bossText.style.display="block";
 
 
-},220000);
+},100000);
 
 
 
@@ -290,8 +290,17 @@ scare.style.display="flex";
     jumpscareSound.currentTime = 0;
     jumpscareSound.play();
 
-},223000);
+},103000);
 
+// Spectrum 11 kattintás → titkos oldal
+
+const spectrum = document.getElementById("spectrum");
+
+spectrum.addEventListener("click", function(){
+
+    window.location.replace("fnaf.html");
+
+});
 
 
 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+<meta charset="UTF-8">
+<title>FNAF</title>
+
+<style>
+
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+
+#itsme {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#golden {
+    display: none;
+    position: fixed;
+    inset: 0;
+}
+
+
+#golden img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1>Freddy Fazbear's Pizza</h1>
+
+<p>
+Egy furcsa éjszaka kezdődik...
+</p>
+
+
+<div id="itsme">
+    IT'S ME
+</div>
+
+
+<div id="golden">
+
+    <img src="Gf2.jpg">
+
+</div>
+
+
+<audio id="jumpscareSound">
+    <source src="jumpscare.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<script>
+
+const itsme = document.getElementById("itsme");
+const golden = document.getElementById("golden");
+const sound = document.getElementById("jumpscareSound");
+
+
+// 2 perc után IT'S ME
+
+setTimeout(()=>{
+
+    itsme.style.display = "flex";
+
+},120000);
+
+
+
+// 2 másodperccel később Golden Freddy jumpscare
+
+setTimeout(()=>{
+
+    itsme.style.display = "none";
+
+    golden.style.display = "block";
+
+    sound.currentTime = 0;
+    sound.play();
+
+},122000);
+
+
+</script>
+
+
+</body>
+
+</html>
