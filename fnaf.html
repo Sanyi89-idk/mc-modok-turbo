@@ -243,6 +243,9 @@ if(clicks === 51){
 
 if(clicks === 52){
 
+    // Eltűnik a számláló
+    counter.style.display = "none";
+
     itsme.style.display = "none";
 
     golden.style.display = "block";
@@ -267,6 +270,13 @@ if(clicks === 52){
 purpleGuy.addEventListener("click", ()=>{
 
     spring.style.display = "block";
+
+    setTimeout(()=>{
+
+        window.location.replace("tbr.html");
+
+    },10000);
+
 
 });
 
