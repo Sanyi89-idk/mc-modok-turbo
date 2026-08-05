@@ -84,11 +84,12 @@
 
 }
 
-#itsme {
+#itsme{
 
     display:none;
-
     position:fixed;
+
+    background:transparent;
 
     color:white;
 
@@ -99,6 +100,9 @@
     cursor:pointer;
 
     z-index:10;
+
+    width: auto;
+    height: auto;
 
     transition:
     top 3s ease-in-out,
@@ -164,8 +168,67 @@
 }
 
 
-#itsme {
+#itsme.move {
 
-animation: moveGlitch 4s infinite;
+    animation: moveGlitch 4s infinite;
+
+}
+
+#counter{
+
+    position:fixed;
+    top:15px;
+    left:15px;
+
+    color:white;
+    font-size:30px;
+    font-family:Arial;
+
+    z-index:999;
+
+}
+
+#spring{
+
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+
+}
+
+#spring img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+@keyframes flash{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+.flash{
+
+    animation: flash 0.6s infinite;
+
+}
+
+.flashFast{
+
+    animation: flash 0.2s infinite;
 
 }

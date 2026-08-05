@@ -71,6 +71,7 @@ body {
 
 <body>
 
+<div id="counter">0/50</div>
 
 <h1 class="gold">Freddy Fazbear's Pizza</h1>
 
@@ -81,7 +82,7 @@ Egy furcsa éjszaka kezdődik...
 
 <div class="glitch-text">
 
-    <p class="text1">PURPLE GUY</p>
+    <p class="text1" id="purpleGuy">PURPLE GUY</p>
 
     <p class="text2">HELP</p>
 
@@ -116,7 +117,11 @@ Egy furcsa éjszaka kezdődik...
 </audio>
 
 
+<div id="spring">
 
+    <img src="spring.jpg">
+
+</div>
 
 <script>
 
@@ -124,6 +129,12 @@ Egy furcsa éjszaka kezdődik...
 const itsme = document.getElementById("itsme");
 const golden = document.getElementById("golden");
 const sound = document.getElementById("jumpscareSound");
+
+const counter = document.getElementById("counter");
+const purpleGuy = document.getElementById("purpleGuy");
+const spring = document.getElementById("spring");
+
+
 
 
 let clicks = 0;
@@ -180,6 +191,15 @@ itsme.addEventListener("click", ()=>{
 
 clicks++;
 
+counter.innerHTML = clicks + "/50";
+
+// 45-től villogni kezd
+if(clicks === 45){
+
+    counter.classList.add("flash");
+
+}
+
 
 
 // első 20 kattintásig nő
@@ -205,22 +225,27 @@ if(clicks === 49){
 
 
 
-// 50-nél jumpscare
-
 if(clicks === 50){
 
+    counter.innerHTML = "50/50";
+    counter.style.color = "red";
 
-    itsme.style.display="none";
+    counter.classList.remove("flash");
+    counter.classList.add("flashFast");
 
+}
 
-    golden.style.display="block";
+// 51. kattintás
+if(clicks === 51){
 
+    counter.innerHTML = "YOU ARE DEAD";
 
-    sound.currentTime=0;
+    itsme.style.display = "none";
 
+    golden.style.display = "block";
+
+    sound.currentTime = 0;
     sound.play();
-
-
 
     setTimeout(()=>{
 
@@ -228,9 +253,17 @@ if(clicks === 50){
 
     },5000);
 
+}
+
 
 }
 
+
+);
+
+purpleGuy.addEventListener("click", ()=>{
+
+    spring.style.display = "block";
 
 });
 
